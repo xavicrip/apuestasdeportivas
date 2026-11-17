@@ -1,0 +1,15 @@
+{
+  "name": "@apuestas/reports",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "uv run uvicorn app.main:app --reload --port 8000",
+    "lint": "uv run --extra dev ruff check .",
+    "lint:fix": "uv run --extra dev ruff check . --fix",
+    "typecheck": "echo 'Python type checking via ruff'",
+    "test": "uv run --extra dev pytest",
+    "test:ci": "uv run --extra dev pytest --tb=short -q",
+    "build": "echo 'No build step for Python service'",
+    "clean": "find . -type d -name __pycache__ -exec rm -rf {} + 2>/dev/null; true"
+  }
+}
